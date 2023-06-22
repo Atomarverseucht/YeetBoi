@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.btMenu = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbRedDude = new System.Windows.Forms.Label();
+            this.lbBlueDude = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -44,31 +44,31 @@
             this.btMenu.Name = "btMenu";
             this.btMenu.Size = new System.Drawing.Size(202, 88);
             this.btMenu.TabIndex = 2;
-            this.btMenu.Text = "Menü";
+            this.btMenu.Text = "Menu";
             this.btMenu.UseVisualStyleBackColor = true;
             this.btMenu.Click += new System.EventHandler(this.BtMenu_Click);
             // 
-            // label1
+            // lbRedDude
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(224, 452);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(209, 45);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "DudeInRed";
+            this.lbRedDude.AutoSize = true;
+            this.lbRedDude.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbRedDude.Location = new System.Drawing.Point(224, 452);
+            this.lbRedDude.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lbRedDude.Name = "lbRedDude";
+            this.lbRedDude.Size = new System.Drawing.Size(167, 45);
+            this.lbRedDude.TabIndex = 3;
+            this.lbRedDude.Text = "RedDude";
             // 
-            // label2
+            // lbBlueDude
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(596, 452);
-            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(230, 45);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "DudeInBlue";
+            this.lbBlueDude.AutoSize = true;
+            this.lbBlueDude.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBlueDude.Location = new System.Drawing.Point(596, 452);
+            this.lbBlueDude.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lbBlueDude.Name = "lbBlueDude";
+            this.lbBlueDude.Size = new System.Drawing.Size(188, 45);
+            this.lbBlueDude.TabIndex = 4;
+            this.lbBlueDude.Text = "BlueDude";
             // 
             // pictureBox2
             // 
@@ -99,8 +99,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1698, 865);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbBlueDude);
+            this.Controls.Add(this.lbRedDude);
             this.Controls.Add(this.btMenu);
             this.Controls.Add(this.pictureBox1);
             this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
@@ -118,8 +118,8 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btMenu;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbRedDude;
+        private System.Windows.Forms.Label lbBlueDude;
         private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

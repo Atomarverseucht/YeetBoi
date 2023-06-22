@@ -30,17 +30,23 @@ namespace endlesrunner
 
         private void Skins_Load(object sender, EventArgs e)
         {
-            if (Memory.mode)
+            if (Memory.mode)                                            // Darkmode
             {
                 BackColor = Color.Black;
                 ForeColor = Color.White;
                 btMenu.BackColor = Color.Black;
             }
-            else 
+            else                                                        // Lightmode
             {
                 BackColor= Color.White;
                 ForeColor= Color.Black;
                 btMenu.BackColor = Color.White;
+            }
+
+            if (Memory.language)
+            {
+                lbRedDude.Text = "Roter Kerl";
+                lbBlueDude.Text = "Blauer Kerl";
             }
         }
     }

@@ -136,6 +136,7 @@ namespace endlesrunner
                 btSkins.Text = "Kostüme";
                 btWhitemode.Text = "Hell";
                 lbVolume.Text = "Lautstärke";
+                lbCoins.Text = "Münzen: " + Memory.coinvalue;
                 Memory.language = false;
             }
             else
@@ -149,6 +150,7 @@ namespace endlesrunner
                 btSkins.Text = "Skins";
                 btWhitemode.Text = "LightMode";
                 lbVolume.Text = "Volume";
+                lbCoins.Text = "Coins: " + Memory.coinvalue;
                 Memory.language = true;
             }
         }

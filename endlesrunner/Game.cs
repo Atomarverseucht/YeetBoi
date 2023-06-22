@@ -54,7 +54,7 @@ namespace endlesrunner
         private void MainGameTimerEvent(object sender, EventArgs e)
         {
             character.Top += jumpSpeed;
-            lbscore.Text = "Score: " + score;
+            lbScore.Text = "Score: " + score;
             lbcoins.Text = "Coins: " + coin;
 
             if(jumping == true && force <= 0)
@@ -102,7 +102,7 @@ namespace endlesrunner
                         gametimer.Stop();
                         Dead.Play();
                         character.Image = Properties.Resources.Player_dead;
-                        lbscore.Text += "  Press R to restart the game!";
+                        lbScore.Text += "  Press R to restart the game!";
                         isGameover = true;
 
                         if (score > s)                                      // Highscore wird erfasst und gespeichert
@@ -218,7 +218,7 @@ namespace endlesrunner
             obstaclespeed = 10;
             coinspeed = 10;
             coin = 0;
-            lbscore.Text = "Score:  " + score;
+            lbScore.Text = "Score:  " + score;
             lbcoins.Text = "Coins:  " + coin;
             character.Image = Properties.Resources.chrakter_neu_2;         
             isGameover = false;
@@ -243,6 +243,11 @@ namespace endlesrunner
                 }
             }
             gametimer.Start();
+        }
+
+        private void game_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -47,9 +47,10 @@
             // 
             // btDarkmode
             // 
-            this.btDarkmode.Location = new System.Drawing.Point(48, 160);
+            this.btDarkmode.Location = new System.Drawing.Point(96, 308);
+            this.btDarkmode.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btDarkmode.Name = "btDarkmode";
-            this.btDarkmode.Size = new System.Drawing.Size(83, 29);
+            this.btDarkmode.Size = new System.Drawing.Size(166, 56);
             this.btDarkmode.TabIndex = 0;
             this.btDarkmode.Text = "Darkmode";
             this.btDarkmode.UseVisualStyleBackColor = true;
@@ -57,9 +58,10 @@
             // 
             // btExit
             // 
-            this.btExit.Location = new System.Drawing.Point(573, 378);
+            this.btExit.Location = new System.Drawing.Point(1146, 727);
+            this.btExit.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btExit.Name = "btExit";
-            this.btExit.Size = new System.Drawing.Size(90, 43);
+            this.btExit.Size = new System.Drawing.Size(180, 83);
             this.btExit.TabIndex = 1;
             this.btExit.Text = "Exit";
             this.btExit.UseVisualStyleBackColor = true;
@@ -67,9 +69,10 @@
             // 
             // btStart
             // 
-            this.btStart.Location = new System.Drawing.Point(204, 88);
+            this.btStart.Location = new System.Drawing.Point(408, 169);
+            this.btStart.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btStart.Name = "btStart";
-            this.btStart.Size = new System.Drawing.Size(238, 75);
+            this.btStart.Size = new System.Drawing.Size(476, 144);
             this.btStart.TabIndex = 2;
             this.btStart.Text = "Play";
             this.btStart.UseVisualStyleBackColor = true;
@@ -79,9 +82,10 @@
             // 
             this.lbTime.AutoSize = true;
             this.lbTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTime.Location = new System.Drawing.Point(547, 22);
+            this.lbTime.Location = new System.Drawing.Point(1094, 42);
+            this.lbTime.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lbTime.Name = "lbTime";
-            this.lbTime.Size = new System.Drawing.Size(38, 13);
+            this.lbTime.Size = new System.Drawing.Size(71, 26);
             this.lbTime.TabIndex = 3;
             this.lbTime.Text = "Time:";
             // 
@@ -89,9 +93,10 @@
             // 
             this.lbDate.AutoSize = true;
             this.lbDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDate.Location = new System.Drawing.Point(547, 55);
+            this.lbDate.Location = new System.Drawing.Point(1094, 106);
+            this.lbDate.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lbDate.Name = "lbDate";
-            this.lbDate.Size = new System.Drawing.Size(38, 13);
+            this.lbDate.Size = new System.Drawing.Size(69, 26);
             this.lbDate.TabIndex = 4;
             this.lbDate.Text = "Date:";
             // 
@@ -104,35 +109,40 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(263, 22);
+            this.label1.Location = new System.Drawing.Point(526, 42);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 31);
+            this.label1.Size = new System.Drawing.Size(224, 63);
             this.label1.TabIndex = 5;
             this.label1.Text = "YeetBoi";
             // 
             // lbVolume
             // 
             this.lbVolume.AutoSize = true;
-            this.lbVolume.Location = new System.Drawing.Point(295, 317);
+            this.lbVolume.Location = new System.Drawing.Point(590, 610);
+            this.lbVolume.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lbVolume.Name = "lbVolume";
-            this.lbVolume.Size = new System.Drawing.Size(42, 13);
+            this.lbVolume.Size = new System.Drawing.Size(84, 25);
             this.lbVolume.TabIndex = 8;
             this.lbVolume.Text = "Volume";
             // 
             // btShop
             // 
-            this.btShop.Location = new System.Drawing.Point(204, 205);
+            this.btShop.Location = new System.Drawing.Point(408, 394);
+            this.btShop.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btShop.Name = "btShop";
-            this.btShop.Size = new System.Drawing.Size(105, 38);
+            this.btShop.Size = new System.Drawing.Size(210, 73);
             this.btShop.TabIndex = 9;
             this.btShop.Text = "Shop";
             this.btShop.UseVisualStyleBackColor = true;
+            this.btShop.Click += new System.EventHandler(this.btShop_Click);
             // 
             // btSkins
             // 
-            this.btSkins.Location = new System.Drawing.Point(326, 205);
+            this.btSkins.Location = new System.Drawing.Point(652, 394);
+            this.btSkins.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btSkins.Name = "btSkins";
-            this.btSkins.Size = new System.Drawing.Size(116, 38);
+            this.btSkins.Size = new System.Drawing.Size(232, 73);
             this.btSkins.TabIndex = 10;
             this.btSkins.Text = "Skins";
             this.btSkins.UseVisualStyleBackColor = true;
@@ -140,18 +150,20 @@
             // 
             // tbVolume
             // 
-            this.tbVolume.Location = new System.Drawing.Point(186, 333);
+            this.tbVolume.Location = new System.Drawing.Point(372, 640);
+            this.tbVolume.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tbVolume.Maximum = 100;
             this.tbVolume.Name = "tbVolume";
-            this.tbVolume.Size = new System.Drawing.Size(266, 45);
+            this.tbVolume.Size = new System.Drawing.Size(532, 90);
             this.tbVolume.TabIndex = 11;
             this.tbVolume.TickFrequency = 10;
             // 
             // btWhitemode
             // 
-            this.btWhitemode.Location = new System.Drawing.Point(48, 195);
+            this.btWhitemode.Location = new System.Drawing.Point(96, 375);
+            this.btWhitemode.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btWhitemode.Name = "btWhitemode";
-            this.btWhitemode.Size = new System.Drawing.Size(83, 26);
+            this.btWhitemode.Size = new System.Drawing.Size(166, 50);
             this.btWhitemode.TabIndex = 12;
             this.btWhitemode.Text = "Whitemode";
             this.btWhitemode.UseVisualStyleBackColor = true;
@@ -159,9 +171,10 @@
             // 
             // btLanguage
             // 
-            this.btLanguage.Location = new System.Drawing.Point(204, 249);
+            this.btLanguage.Location = new System.Drawing.Point(408, 479);
+            this.btLanguage.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btLanguage.Name = "btLanguage";
-            this.btLanguage.Size = new System.Drawing.Size(238, 42);
+            this.btLanguage.Size = new System.Drawing.Size(476, 81);
             this.btLanguage.TabIndex = 7;
             this.btLanguage.Text = "Change to German";
             this.btLanguage.UseVisualStyleBackColor = true;
@@ -169,10 +182,10 @@
             // 
             // mainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(775, 433);
+            this.ClientSize = new System.Drawing.Size(1550, 833);
             this.Controls.Add(this.btWhitemode);
             this.Controls.Add(this.tbVolume);
             this.Controls.Add(this.btSkins);
@@ -185,6 +198,7 @@
             this.Controls.Add(this.btStart);
             this.Controls.Add(this.btExit);
             this.Controls.Add(this.btDarkmode);
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "mainMenu";

@@ -17,7 +17,7 @@ namespace endlesrunner
         public shop()
         {
             InitializeComponent();
-            ShopPlayer = new SoundPlayer("Bubblaine.wav");
+            ShopPlayer = new SoundPlayer("GameMainMenu.wav");
             ShopPlayer.PlayLooping();
         }
     }

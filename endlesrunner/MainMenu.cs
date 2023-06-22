@@ -15,6 +15,9 @@ namespace endlesrunner
     {
         public SoundPlayer MenuPlayer;
         public SoundPlayer Ingame;
+        Memory m = new Memory();
+       
+        
 
         public mainMenu()
         {
@@ -35,6 +38,7 @@ namespace endlesrunner
             tmUpdate.Start();
             lbTime.Text = DateTime.Now.ToLongTimeString();
             lbDate.Text = DateTime.Now.ToLongDateString();
+            m.language = false;
         }
 
         private void tmUpdate_Tick(object sender, EventArgs e)
@@ -48,7 +52,7 @@ namespace endlesrunner
             game G = new game();
             G.Show();
             this.Hide();
-            MenuPlayer.Stop();                                  //Stopt Musik beim drücken des Start Buttons
+            MenuPlayer.Stop();                                      //Stoppt Musik beim drücken des Start Buttons
             Ingame.PlayLooping();
         }
 
@@ -107,7 +111,39 @@ namespace endlesrunner
 
         private void BtLanguage_Click(object sender, EventArgs e)
         {
+            if (Memory.language == true)
+            {
+                lbTime.Text = "Uhrzeit: ";
+                btStart.Text = "Spielen";
+                btDarkmode.Text = "Dunkel";
+                btLanguage.Text = "Ändern auf Englisch";
+                btExit.Text = "Beenden";
+                btShop.Text = "Marktplatz";
+                btSkins.Text = "Kostüme";
+                btWhitemode.Text = "Hell";
+                lbVolume.Text = "Lautstärke";
+                language = false;
+            }
+            else
+            {
+                lbTime.Text = "Time: ";
+                btStart.Text = "Play";
+                btDarkmode.Text = "Darkmode";
+                btLanguage.Text = "Change to German";
+                btExit.Text = "Exit";
+                btShop.Text = "Shop";
+                btSkins.Text = "Skins";
+                btWhitemode.Text = "LightMode";
+                lbVolume.Text = "Volume";
+                language = true;
+            }
+        }
 
+        private void btShop_Click(object sender, EventArgs e)
+        {
+            shop shop = new shop();
+            shop.Show();
+            this.Hide();
         }
     }
 }

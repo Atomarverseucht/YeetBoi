@@ -111,6 +111,9 @@ namespace endlesrunner
                             Properties.Settings.Default.h_score = lbhscore.Text;
                             Properties.Settings.Default.Save();
                         }
+
+                       
+                        Memory.coinvalue = Memory.coinvalue + coin;                   // Kontostand aktualisieren
                     }
                 }
             }

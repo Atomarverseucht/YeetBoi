@@ -33,7 +33,7 @@
             // 
             // btMenu
             // 
-            this.btMenu.Location = new System.Drawing.Point(1383, 762);
+            this.btMenu.Location = new System.Drawing.Point(1202, 737);
             this.btMenu.Margin = new System.Windows.Forms.Padding(6);
             this.btMenu.Name = "btMenu";
             this.btMenu.Size = new System.Drawing.Size(202, 88);
@@ -46,7 +46,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1600, 865);
+            this.ClientSize = new System.Drawing.Size(1440, 865);
             this.Controls.Add(this.btMenu);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);

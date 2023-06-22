@@ -42,13 +42,14 @@
             this.tbVolume = new System.Windows.Forms.TrackBar();
             this.btWhitemode = new System.Windows.Forms.Button();
             this.btLanguage = new System.Windows.Forms.Button();
+            this.lbCoins = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.tbVolume)).BeginInit();
             this.SuspendLayout();
             // 
             // btDarkmode
             // 
             this.btDarkmode.Location = new System.Drawing.Point(96, 308);
-            this.btDarkmode.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btDarkmode.Margin = new System.Windows.Forms.Padding(6);
             this.btDarkmode.Name = "btDarkmode";
             this.btDarkmode.Size = new System.Drawing.Size(166, 56);
             this.btDarkmode.TabIndex = 0;
@@ -59,7 +60,7 @@
             // btExit
             // 
             this.btExit.Location = new System.Drawing.Point(1146, 727);
-            this.btExit.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btExit.Margin = new System.Windows.Forms.Padding(6);
             this.btExit.Name = "btExit";
             this.btExit.Size = new System.Drawing.Size(180, 83);
             this.btExit.TabIndex = 1;
@@ -70,7 +71,7 @@
             // btStart
             // 
             this.btStart.Location = new System.Drawing.Point(408, 169);
-            this.btStart.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btStart.Margin = new System.Windows.Forms.Padding(6);
             this.btStart.Name = "btStart";
             this.btStart.Size = new System.Drawing.Size(476, 144);
             this.btStart.TabIndex = 2;
@@ -129,7 +130,7 @@
             // btShop
             // 
             this.btShop.Location = new System.Drawing.Point(408, 394);
-            this.btShop.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btShop.Margin = new System.Windows.Forms.Padding(6);
             this.btShop.Name = "btShop";
             this.btShop.Size = new System.Drawing.Size(210, 73);
             this.btShop.TabIndex = 9;
@@ -140,7 +141,7 @@
             // btSkins
             // 
             this.btSkins.Location = new System.Drawing.Point(652, 394);
-            this.btSkins.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btSkins.Margin = new System.Windows.Forms.Padding(6);
             this.btSkins.Name = "btSkins";
             this.btSkins.Size = new System.Drawing.Size(232, 73);
             this.btSkins.TabIndex = 10;
@@ -151,7 +152,7 @@
             // tbVolume
             // 
             this.tbVolume.Location = new System.Drawing.Point(372, 640);
-            this.tbVolume.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tbVolume.Margin = new System.Windows.Forms.Padding(6);
             this.tbVolume.Maximum = 100;
             this.tbVolume.Name = "tbVolume";
             this.tbVolume.Size = new System.Drawing.Size(532, 90);
@@ -161,7 +162,7 @@
             // btWhitemode
             // 
             this.btWhitemode.Location = new System.Drawing.Point(96, 375);
-            this.btWhitemode.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btWhitemode.Margin = new System.Windows.Forms.Padding(6);
             this.btWhitemode.Name = "btWhitemode";
             this.btWhitemode.Size = new System.Drawing.Size(166, 50);
             this.btWhitemode.TabIndex = 12;
@@ -172,7 +173,7 @@
             // btLanguage
             // 
             this.btLanguage.Location = new System.Drawing.Point(408, 479);
-            this.btLanguage.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btLanguage.Margin = new System.Windows.Forms.Padding(6);
             this.btLanguage.Name = "btLanguage";
             this.btLanguage.Size = new System.Drawing.Size(476, 81);
             this.btLanguage.TabIndex = 7;
@@ -180,12 +181,22 @@
             this.btLanguage.UseVisualStyleBackColor = true;
             this.btLanguage.Click += new System.EventHandler(this.BtLanguage_Click);
             // 
+            // lbCoins
+            // 
+            this.lbCoins.AutoSize = true;
+            this.lbCoins.Location = new System.Drawing.Point(80, 42);
+            this.lbCoins.Name = "lbCoins";
+            this.lbCoins.Size = new System.Drawing.Size(24, 25);
+            this.lbCoins.TabIndex = 13;
+            this.lbCoins.Text = "_";
+            // 
             // mainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1550, 833);
+            this.Controls.Add(this.lbCoins);
             this.Controls.Add(this.btWhitemode);
             this.Controls.Add(this.tbVolume);
             this.Controls.Add(this.btSkins);
@@ -198,7 +209,7 @@
             this.Controls.Add(this.btStart);
             this.Controls.Add(this.btExit);
             this.Controls.Add(this.btDarkmode);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "mainMenu";
@@ -225,5 +236,6 @@
         private System.Windows.Forms.Button btWhitemode;
         public System.Windows.Forms.TrackBar tbVolume;
         private System.Windows.Forms.Button btLanguage;
+        private System.Windows.Forms.Label lbCoins;
     }
 }

@@ -8,9 +8,9 @@ namespace endlesrunner
 {
     internal class Memory
     {
-        public int coinvalue;
-        public int skin;
-        public bool mode;
-        public bool language { set; get; }
+        public static int coinvalue = 0;
+        public static int skin;
+        public static bool mode;
+        public static bool language { set; get; }
     }
 }

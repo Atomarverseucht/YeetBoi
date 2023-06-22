@@ -15,19 +15,15 @@ namespace endlesrunner
     {
         public SoundPlayer MenuPlayer;
         public SoundPlayer Ingame;
-        Memory m = new Memory();
-       
-        
 
         public mainMenu()
         {
             InitializeComponent();
             MenuPlayer = new SoundPlayer("Main Menu.wav");
-            MenuPlayer.PlayLooping();                                      //Startet Musik beim öffnen des Menüs
+            MenuPlayer.PlayLooping();                                      // Startet Musik beim öffnen des Menüs
             Ingame = new SoundPlayer("Ingame Music.wav");
         }
 
-        
         private void btExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -38,7 +34,9 @@ namespace endlesrunner
             tmUpdate.Start();
             lbTime.Text = DateTime.Now.ToLongTimeString();
             lbDate.Text = DateTime.Now.ToLongDateString();
-            m.language = false;
+            Memory.language = false;
+
+            lbCoins.Text = "Coins: " + Memory.coinvalue.ToString();              // Geldanzeige
         }
 
         private void tmUpdate_Tick(object sender, EventArgs e)
@@ -111,7 +109,7 @@ namespace endlesrunner
 
         private void BtLanguage_Click(object sender, EventArgs e)
         {
-            if (m.language == true)
+            if (Memory.language == true)
             {
                 lbTime.Text = "Uhrzeit: ";
                 btStart.Text = "Spielen";
@@ -122,7 +120,7 @@ namespace endlesrunner
                 btSkins.Text = "Kostüme";
                 btWhitemode.Text = "Hell";
                 lbVolume.Text = "Lautstärke";
-                m.language = false;
+                Memory.language = false;
             }
             else
             {
@@ -135,7 +133,7 @@ namespace endlesrunner
                 btSkins.Text = "Skins";
                 btWhitemode.Text = "LightMode";
                 lbVolume.Text = "Volume";
-                m.language = true;
+                Memory.language = true;
             }
         }
 

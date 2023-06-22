@@ -111,7 +111,7 @@ namespace endlesrunner
 
         private void BtLanguage_Click(object sender, EventArgs e)
         {
-            if (Memory.language == true)
+            if (m.language == true)
             {
                 lbTime.Text = "Uhrzeit: ";
                 btStart.Text = "Spielen";
@@ -122,7 +122,7 @@ namespace endlesrunner
                 btSkins.Text = "Kostüme";
                 btWhitemode.Text = "Hell";
                 lbVolume.Text = "Lautstärke";
-                language = false;
+                m.language = false;
             }
             else
             {
@@ -135,7 +135,7 @@ namespace endlesrunner
                 btSkins.Text = "Skins";
                 btWhitemode.Text = "LightMode";
                 lbVolume.Text = "Volume";
-                language = true;
+                m.language = true;
             }
         }
 

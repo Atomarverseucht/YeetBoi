@@ -20,5 +20,12 @@ namespace endlesrunner
             ShopPlayer = new SoundPlayer("GameMainMenu.wav");
             ShopPlayer.PlayLooping();
         }
+
+        private void btMenu_Click(object sender, EventArgs e)
+        {
+            mainMenu M = new mainMenu();
+            M.Show();
+            this.Hide();
+        }
     }
 }

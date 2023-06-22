@@ -27,5 +27,21 @@ namespace endlesrunner
             M.Show();
             this.Hide();
         }
+
+        private void shop_Load(object sender, EventArgs e)
+        {
+            if (Memory.mode)
+            {
+                BackColor = Color.Black;
+                ForeColor = Color.White;
+                btMenu.BackColor = Color.Black;
+            }
+            else
+            {
+                BackColor = Color.White;
+                ForeColor = Color.Black;
+                btMenu.BackColor = Color.White;
+            }
+        }
     }
 }

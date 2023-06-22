@@ -52,6 +52,7 @@
             this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "shop";
             this.Text = "shop";
+            this.Load += new System.EventHandler(this.shop_Load);
             this.ResumeLayout(false);
 
         }

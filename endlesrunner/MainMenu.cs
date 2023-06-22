@@ -37,12 +37,16 @@ namespace endlesrunner
             Memory.language = false;
 
             lbCoins.Text = "Coins: " + Memory.coinvalue.ToString();              // Geldanzeige
+            if(Memory.mode == false) { Whitemode(); }
+            else { Darkmode(); }
         }
 
         private void tmUpdate_Tick(object sender, EventArgs e)
         {
             lbTime.Text = DateTime.Now.ToLongTimeString();
             tmUpdate.Start();
+            if (Memory.mode == false) { Whitemode(); }
+            else { Darkmode(); }
         }
 
         private void btStart_Click(object sender, EventArgs e)
@@ -56,7 +60,13 @@ namespace endlesrunner
 
         private void btDarkmode_Click(object sender, EventArgs e)
         {
+            Darkmode();
+            Memory.mode = true;
+        }
+        private void Darkmode()
+        {
             BackColor = Color.Black;
+            ForeColor = Color.White;
             lbTime.ForeColor = Color.White;
             lbDate.ForeColor = Color.White;
             label1.ForeColor = Color.White;
@@ -79,7 +89,13 @@ namespace endlesrunner
 
         private void btWhitemode_Click(object sender, EventArgs e)
         {
+            Whitemode();
+            Memory.mode = false;
+        }
+        public void Whitemode()
+        {
             BackColor = Color.White;
+            ForeColor = Color.Black;
             lbTime.ForeColor = Color.Black;
             lbDate.ForeColor = Color.Black;
             label1.ForeColor = Color.Black;

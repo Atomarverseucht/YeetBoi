@@ -37,8 +37,16 @@ namespace endlesrunner
             Memory.language = false;
 
             lbCoins.Text = "Coins: " + Memory.coinvalue.ToString();              // Geldanzeige
-            if(Memory.mode == false) { Whitemode(); }
-            else { Darkmode(); }
+
+            if(Memory.mode == true)                                              // Dark-/Lightmode
+            { 
+                Darkmode(); 
+            }                           
+
+            if(Memory.language == true)                                          // German-English
+            {
+                changeToGerman();
+            }
         }
 
         private void tmUpdate_Tick(object sender, EventArgs e)
@@ -123,10 +131,22 @@ namespace endlesrunner
             this.Hide();
         }
 
+        // Language-Switch English/German
         private void BtLanguage_Click(object sender, EventArgs e)
         {
             if (Memory.language == true)
             {
+                changeToGerman();
+                Memory.language = false;
+            }
+            else
+            {
+                changeToEnglish();
+                Memory.language = true;
+            }
+        }
+        private void changeToGerman()
+        {
                 lbTime.Text = "Uhrzeit: ";
                 btStart.Text = "Spielen";
                 btDarkmode.Text = "Dunkel";
@@ -137,10 +157,9 @@ namespace endlesrunner
                 btWhitemode.Text = "Hell";
                 lbVolume.Text = "Lautstärke";
                 lbCoins.Text = "Münzen: " + Memory.coinvalue;
-                Memory.language = false;
-            }
-            else
-            {
+        }
+        private void changeToEnglish()
+        {
                 lbTime.Text = "Time: ";
                 btStart.Text = "Play";
                 btDarkmode.Text = "Darkmode";
@@ -151,8 +170,6 @@ namespace endlesrunner
                 btWhitemode.Text = "LightMode";
                 lbVolume.Text = "Volume";
                 lbCoins.Text = "Coins: " + Memory.coinvalue;
-                Memory.language = true;
-            }
         }
 
         private void btShop_Click(object sender, EventArgs e)
@@ -160,6 +177,11 @@ namespace endlesrunner
             shop shop = new shop();
             shop.Show();
             this.Hide();
+        }
+
+        private void tbVolume_Scroll(object sender, EventArgs e)
+        {
+
         }
     }
 }

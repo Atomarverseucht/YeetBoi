@@ -38,7 +38,7 @@
             this.btMenu.Name = "btMenu";
             this.btMenu.Size = new System.Drawing.Size(202, 88);
             this.btMenu.TabIndex = 3;
-            this.btMenu.Text = "Menü";
+            this.btMenu.Text = "Menu";
             this.btMenu.UseVisualStyleBackColor = true;
             this.btMenu.Click += new System.EventHandler(this.btMenu_Click);
             // 

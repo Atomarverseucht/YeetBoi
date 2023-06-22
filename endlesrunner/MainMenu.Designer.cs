@@ -158,6 +158,7 @@
             this.tbVolume.Size = new System.Drawing.Size(532, 90);
             this.tbVolume.TabIndex = 11;
             this.tbVolume.TickFrequency = 10;
+            this.tbVolume.Scroll += new System.EventHandler(this.tbVolume_Scroll);
             // 
             // btWhitemode
             // 

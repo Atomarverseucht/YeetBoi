@@ -43,6 +43,9 @@
             this.btWhitemode = new System.Windows.Forms.Button();
             this.btLanguage = new System.Windows.Forms.Button();
             this.lbCoins = new System.Windows.Forms.Label();
+            this.tbCodeInput = new System.Windows.Forms.TextBox();
+            this.btSubmitCode = new System.Windows.Forms.Button();
+            this.lbCode = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.tbVolume)).BeginInit();
             this.SuspendLayout();
             // 
@@ -158,7 +161,6 @@
             this.tbVolume.Size = new System.Drawing.Size(532, 90);
             this.tbVolume.TabIndex = 11;
             this.tbVolume.TickFrequency = 10;
-            this.tbVolume.Scroll += new System.EventHandler(this.tbVolume_Scroll);
             // 
             // btWhitemode
             // 
@@ -191,12 +193,41 @@
             this.lbCoins.TabIndex = 13;
             this.lbCoins.Text = "_";
             // 
+            // tbCodeInput
+            // 
+            this.tbCodeInput.Location = new System.Drawing.Point(134, 745);
+            this.tbCodeInput.Name = "tbCodeInput";
+            this.tbCodeInput.Size = new System.Drawing.Size(371, 31);
+            this.tbCodeInput.TabIndex = 14;
+            // 
+            // btSubmitCode
+            // 
+            this.btSubmitCode.Location = new System.Drawing.Point(511, 745);
+            this.btSubmitCode.Name = "btSubmitCode";
+            this.btSubmitCode.Size = new System.Drawing.Size(107, 38);
+            this.btSubmitCode.TabIndex = 15;
+            this.btSubmitCode.Text = "Submit";
+            this.btSubmitCode.UseVisualStyleBackColor = true;
+            this.btSubmitCode.Click += new System.EventHandler(this.btSubmitCode_Click);
+            // 
+            // lbCode
+            // 
+            this.lbCode.AutoSize = true;
+            this.lbCode.Location = new System.Drawing.Point(134, 783);
+            this.lbCode.Name = "lbCode";
+            this.lbCode.Size = new System.Drawing.Size(63, 25);
+            this.lbCode.TabIndex = 16;
+            this.lbCode.Text = "Code";
+            // 
             // mainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1550, 833);
+            this.Controls.Add(this.lbCode);
+            this.Controls.Add(this.btSubmitCode);
+            this.Controls.Add(this.tbCodeInput);
             this.Controls.Add(this.lbCoins);
             this.Controls.Add(this.btWhitemode);
             this.Controls.Add(this.tbVolume);
@@ -238,5 +269,8 @@
         public System.Windows.Forms.TrackBar tbVolume;
         private System.Windows.Forms.Button btLanguage;
         private System.Windows.Forms.Label lbCoins;
+        private System.Windows.Forms.TextBox tbCodeInput;
+        private System.Windows.Forms.Button btSubmitCode;
+        private System.Windows.Forms.Label lbCode;
     }
 }

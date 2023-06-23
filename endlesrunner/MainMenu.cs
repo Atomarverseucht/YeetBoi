@@ -31,6 +31,7 @@ namespace endlesrunner
 
         private void mainMenu_Load(object sender, EventArgs e)
         {
+
             tmUpdate.Start();
             lbTime.Text = DateTime.Now.ToLongTimeString();
             lbDate.Text = DateTime.Now.ToLongDateString();
@@ -55,6 +56,7 @@ namespace endlesrunner
             tmUpdate.Start();
             if (Memory.mode == false) { Whitemode(); }
             else { Darkmode(); }
+            lbCode.Text = getCode();
         }
 
         private void btStart_Click(object sender, EventArgs e)
@@ -177,12 +179,22 @@ namespace endlesrunner
             shop shop = new shop();
             shop.Show();
             this.Hide();
+        }        
+        
+        public string getCode()
+        {
+            string variables = "";
+
+            for (int i = 0; i < Memory.encodeVariables().Length; i++)
+            {
+                variables = variables + Memory.encodeVariables()[i] + ".";
+            }
+            return variables;
         }
 
-        private void tbVolume_Scroll(object sender, EventArgs e)
+        private void btSubmitCode_Click(object sender, EventArgs e)
         {
-            Memory.volume = tbVolume.Value;
-            lbCoins.Text = tbVolume.Value.ToString();
+            Memory.decodeVariables(tbCodeInput.Text.Split('.'));
         }
     }
 }

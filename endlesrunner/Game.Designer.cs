@@ -1,6 +1,6 @@
 ﻿namespace endlesrunner
 {
-    partial class game
+    partial class Game
     {
         /// <summary>
         /// Erforderliche Designervariable.
@@ -117,7 +117,7 @@
             this.item.BackColor = System.Drawing.Color.Transparent;
             this.item.Image = global::endlesrunner.Properties.Resources.coin__10;
             this.item.Location = new System.Drawing.Point(1128, 579);
-            this.item.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.item.Margin = new System.Windows.Forms.Padding(6);
             this.item.Name = "item";
             this.item.Size = new System.Drawing.Size(122, 96);
             this.item.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -129,7 +129,7 @@
             // 
             this.ptcoin.Image = global::endlesrunner.Properties.Resources.münze_2;
             this.ptcoin.Location = new System.Drawing.Point(880, 423);
-            this.ptcoin.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.ptcoin.Margin = new System.Windows.Forms.Padding(6);
             this.ptcoin.Name = "ptcoin";
             this.ptcoin.Size = new System.Drawing.Size(100, 96);
             this.ptcoin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -141,7 +141,7 @@
             // 
             this.pictureBox2.Image = global::endlesrunner.Properties.Resources.stein_2;
             this.pictureBox2.Location = new System.Drawing.Point(816, 744);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(6);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(23, 46);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -154,7 +154,7 @@
             this.character.BackColor = System.Drawing.Color.Transparent;
             this.character.Image = global::endlesrunner.Properties.Resources.chrakter_neu_2;
             this.character.Location = new System.Drawing.Point(-6, 710);
-            this.character.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.character.Margin = new System.Windows.Forms.Padding(6);
             this.character.Name = "character";
             this.character.Size = new System.Drawing.Size(64, 64);
             this.character.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -166,14 +166,14 @@
             // 
             this.pictureBox1.Image = global::endlesrunner.Properties.Resources.Game_Background;
             this.pictureBox1.Location = new System.Drawing.Point(-6, -29);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(748, 493);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
-            // game
+            // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -189,8 +189,8 @@
             this.Controls.Add(this.character);
             this.Controls.Add(this.lbScore);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.Name = "game";
+            this.Margin = new System.Windows.Forms.Padding(6);
+            this.Name = "Game";
             this.Text = "YeetBoi";
             this.Load += new System.EventHandler(this.game_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.keyisdown);

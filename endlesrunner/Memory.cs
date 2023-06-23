@@ -13,5 +13,6 @@ namespace endlesrunner
         public static bool mode = false;
         public static bool language = false;
         public static int hs_score = 0;
+        public static int volume = 1;
     }
 }

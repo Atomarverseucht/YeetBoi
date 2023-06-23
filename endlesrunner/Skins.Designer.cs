@@ -31,16 +31,16 @@
             this.btMenu = new System.Windows.Forms.Button();
             this.lbRedDude = new System.Windows.Forms.Label();
             this.lbBlueDude = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pbBlue = new System.Windows.Forms.PictureBox();
+            this.pbRed = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBlue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRed)).BeginInit();
             this.SuspendLayout();
             // 
             // btMenu
             // 
             this.btMenu.Location = new System.Drawing.Point(1169, 720);
-            this.btMenu.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btMenu.Margin = new System.Windows.Forms.Padding(6);
             this.btMenu.Name = "btMenu";
             this.btMenu.Size = new System.Drawing.Size(202, 88);
             this.btMenu.TabIndex = 2;
@@ -70,45 +70,47 @@
             this.lbBlueDude.TabIndex = 4;
             this.lbBlueDude.Text = "BlueDude";
             // 
-            // pictureBox2
+            // pbBlue
             // 
-            this.pictureBox2.Image = global::endlesrunner.Properties.Resources.chasrkter_3;
-            this.pictureBox2.Location = new System.Drawing.Point(528, 140);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(328, 288);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
+            this.pbBlue.Image = global::endlesrunner.Properties.Resources.chasrkter_3;
+            this.pbBlue.Location = new System.Drawing.Point(528, 140);
+            this.pbBlue.Margin = new System.Windows.Forms.Padding(6);
+            this.pbBlue.Name = "pbBlue";
+            this.pbBlue.Size = new System.Drawing.Size(328, 288);
+            this.pbBlue.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbBlue.TabIndex = 5;
+            this.pbBlue.TabStop = false;
+            this.pbBlue.Click += new System.EventHandler(this.pbBlue_Click);
             // 
-            // pictureBox1
+            // pbRed
             // 
-            this.pictureBox1.Image = global::endlesrunner.Properties.Resources.chrakter_neu;
-            this.pictureBox1.Location = new System.Drawing.Point(148, 140);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(328, 288);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Tag = "";
+            this.pbRed.Image = global::endlesrunner.Properties.Resources.chrakter_neu;
+            this.pbRed.Location = new System.Drawing.Point(148, 140);
+            this.pbRed.Margin = new System.Windows.Forms.Padding(6);
+            this.pbRed.Name = "pbRed";
+            this.pbRed.Size = new System.Drawing.Size(328, 288);
+            this.pbRed.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbRed.TabIndex = 0;
+            this.pbRed.TabStop = false;
+            this.pbRed.Tag = "";
+            this.pbRed.Click += new System.EventHandler(this.pbRed_Click);
             // 
             // Skins
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1698, 865);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pbBlue);
             this.Controls.Add(this.lbBlueDude);
             this.Controls.Add(this.lbRedDude);
             this.Controls.Add(this.btMenu);
-            this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Controls.Add(this.pbRed);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Skins";
             this.Text = "Skins";
             this.Load += new System.EventHandler(this.Skins_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBlue)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRed)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -116,10 +118,10 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbRed;
         private System.Windows.Forms.Button btMenu;
         private System.Windows.Forms.Label lbRedDude;
         private System.Windows.Forms.Label lbBlueDude;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pbBlue;
     }
 }

@@ -10,10 +10,12 @@ using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AudioSwitcher.AudioApi.CoreAudio;
+using System.Diagnostics;
 
 namespace endlesrunner
 {    
-    public partial class game : Form
+    public partial class Game : Form
     {
         bool jumping = false;
         int jumpSpeed;
@@ -34,8 +36,7 @@ namespace endlesrunner
         private WaveOut out1;
         private WaveStream CoinSound;
         private WaveOut out2;
-
-        public game()
+        public Game()
         {
             InitializeComponent();
             GameOver = new SoundPlayer("Bubblaine.wav");
@@ -48,7 +49,6 @@ namespace endlesrunner
             out1.Init(JumpSound);
             out2.Init(CoinSound);
             GameReset();
-            lbhscore.Text = Properties.Settings.Default.h_score;
         }
 
         private void MainGameTimerEvent(object sender, EventArgs e)
@@ -105,7 +105,7 @@ namespace endlesrunner
                         score++;
                     }
 
-                    if (score > Memory.hs_score)                                      // Highscore wird erfasst und gespeichert
+                    if (score > Memory.hs_score)                             // Highscore wird erfasst und gespeichert
                     {
                         lbhscore.Text = score.ToString();
                         Memory.hs_score = score;
@@ -124,12 +124,6 @@ namespace endlesrunner
                         else
                         {
                             lbScore.Text += "  Drücke R um das Spiel neuzustarten!";
-                        }
-
-                        if (score > Memory.hs_score)                                      // Highscore wird erfasst und gespeichert
-                        {
-                            lbhscore.Text = score.ToString();
-                            Memory.hs_score = score;
                         }
 
                         Memory.coinvalue = Memory.coinvalue + coin;                   // Kontostand aktualisieren
@@ -287,6 +281,9 @@ namespace endlesrunner
                 lbMenu.Text = "Drücke M um zum Menü zurückzukehren";
                 lbhscore.Location = new Point(110, 60);
             }
+            CoreAudioDevice defaultPlaybackDevice = new CoreAudioController().DefaultPlaybackDevice;
+            Debug.WriteLine("Current Volume:" + defaultPlaybackDevice.Volume);
+            defaultPlaybackDevice.Volume = Memory.volume;
         }
     }
 }

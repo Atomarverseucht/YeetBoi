@@ -45,6 +45,8 @@ namespace endlesrunner
             {
                 changeToGerman();
             }
+            tbVolume.Hide();
+            lbVolume.Hide();
         }
 
         private void tmUpdate_Tick(object sender, EventArgs e)
@@ -57,7 +59,7 @@ namespace endlesrunner
 
         private void btStart_Click(object sender, EventArgs e)
         {
-            game G = new game();
+            Game G = new Game();
             G.Show();
             this.Hide();
             MenuPlayer.Stop();                                      //Stoppt Musik beim drücken des Start Buttons
@@ -179,7 +181,8 @@ namespace endlesrunner
 
         private void tbVolume_Scroll(object sender, EventArgs e)
         {
-
+            Memory.volume = tbVolume.Value;
+            lbCoins.Text = tbVolume.Value.ToString();
         }
     }
 }

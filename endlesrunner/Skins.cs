@@ -49,5 +49,15 @@ namespace endlesrunner
                 lbBlueDude.Text = "Blauer Kerl";
             }
         }
+
+        private void pbRed_Click(object sender, EventArgs e)
+        {
+            pbRed.BackColor = Color.Gold;
+        }
+
+        private void pbBlue_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

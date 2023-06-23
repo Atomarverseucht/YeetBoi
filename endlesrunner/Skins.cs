@@ -28,36 +28,84 @@ namespace endlesrunner
             this.Hide();
         }
 
-        private void Skins_Load(object sender, EventArgs e)
+public void showMode()
         {
-            if (Memory.mode)                                            // Darkmode
+        if (Memory.mode)                                            // Darkmode
             {
                 BackColor = Color.Black;
                 ForeColor = Color.White;
+                lbBlueDude.ForeColor = Color.White;
+                lbRedDude.ForeColor = Color.White;
+                lbBack1.ForeColor = Color.White;
+                lbBasicBack.ForeColor = Color.White;
                 btMenu.BackColor = Color.Black;
             }
             else                                                        // Lightmode
             {
                 BackColor= Color.White;
                 ForeColor= Color.Black;
+                lbRedDude.ForeColor = Color.Black;
+                lbBlueDude.ForeColor = Color.Black;
+                lbBasicBack.ForeColor= Color.Black;
+                lbBack1.ForeColor= Color.Black;
                 btMenu.BackColor = Color.White;
             }
+        }
 
+private void Skins_Load(object sender, EventArgs e)
+        {
+            showMode();
             if (Memory.language)
             {
                 lbRedDude.Text = "Roter Kerl";
                 lbBlueDude.Text = "Blauer Kerl";
             }
+
+            if (Memory.ownedItems[0, 1] == false)
+            {
+                pbBlue.Hide();
+                lbBlueDude.ForeColor= Color.DarkRed;
+            }
+            if (Memory.ownedItems[1, 1] == false)
+            {
+                pbBack1.Hide();
+                lbBack1.ForeColor = Color.DarkRed;
+            }
         }
 
         private void pbRed_Click(object sender, EventArgs e)
         {
-            pbRed.BackColor = Color.Gold;
+            showMode();
+            lbRedDude.ForeColor = Color.Gold;
+            Memory.selectedSkin = 0;
         }
 
         private void pbBlue_Click(object sender, EventArgs e)
         {
+            if (Memory.ownedItems[0, 1] == true)
+            {
+            showMode();
+            lbBlueDude.ForeColor= Color.Gold;
+            Memory.selectedSkin = 1;
+            }
 
         }
+        private void pbBasicBack_Click(object sender, EventArgs e)
+        {
+            showMode();
+            lbBasicBack.ForeColor = Color.Gold;
+            Memory.selectedBackground = 0;
+        }
+        private void pbBack1_Click(object sender, EventArgs e)
+        {
+            if (Memory.ownedItems[1,1] == true)
+            {
+                showMode();
+                lbBack1.ForeColor = Color.Gold;
+                Memory.selectedBackground = 1;
+            }
+        }
+
+
     }
 }

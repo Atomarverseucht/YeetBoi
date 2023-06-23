@@ -10,7 +10,6 @@ using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using AudioSwitcher.AudioApi.CoreAudio;
 using System.Diagnostics;
 
 namespace endlesrunner
@@ -281,9 +280,20 @@ namespace endlesrunner
                 lbMenu.Text = "Drücke M um zum Menü zurückzukehren";
                 lbhscore.Location = new Point(110, 60);
             }
-            CoreAudioDevice defaultPlaybackDevice = new CoreAudioController().DefaultPlaybackDevice;
-            Debug.WriteLine("Current Volume:" + defaultPlaybackDevice.Volume);
-            defaultPlaybackDevice.Volume = Memory.volume;
+
+            switch (Memory.selectedSkin)
+            {
+                case 0: character.Image = Properties.Resources.chrakter_neu_2; break;
+                case 1: character.Image = Properties.Resources.chasrkter_3; break;
+                default: character.Image = Properties.Resources.chrakter_neu_2; break;
+            }
+        
+            switch (Memory.selectedBackground)
+            {
+                case 0: pbBackground.Image = Properties.Resources.Game_Background; break;
+                case 1: pbBackground.Image = Properties.Resources.welt; break;
+                default: pbBackground.Image = Properties.Resources.Game_Background; break;
+            }
         }
     }
 }

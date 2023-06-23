@@ -39,12 +39,12 @@
             this.ptcoin = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.character = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbBackground = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.item)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptcoin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.character)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBackground)).BeginInit();
             this.SuspendLayout();
             // 
             // lbScore
@@ -162,16 +162,16 @@
             this.character.TabStop = false;
             this.character.Tag = "Skin";
             // 
-            // pictureBox1
+            // pbBackground
             // 
-            this.pictureBox1.Image = global::endlesrunner.Properties.Resources.Game_Background;
-            this.pictureBox1.Location = new System.Drawing.Point(-6, -29);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(748, 493);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
+            this.pbBackground.Image = global::endlesrunner.Properties.Resources.Game_Background;
+            this.pbBackground.Location = new System.Drawing.Point(-6, -29);
+            this.pbBackground.Margin = new System.Windows.Forms.Padding(6);
+            this.pbBackground.Name = "pbBackground";
+            this.pbBackground.Size = new System.Drawing.Size(748, 493);
+            this.pbBackground.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbBackground.TabIndex = 7;
+            this.pbBackground.TabStop = false;
             // 
             // Game
             // 
@@ -188,7 +188,7 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.character);
             this.Controls.Add(this.lbScore);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pbBackground);
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Game";
             this.Text = "YeetBoi";
@@ -199,7 +199,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ptcoin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.character)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBackground)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -212,7 +212,7 @@
         private System.Windows.Forms.Label lbMenu;
         private System.Windows.Forms.PictureBox ptcoin;
         private System.Windows.Forms.Label lbcoins;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbBackground;
         private System.Windows.Forms.Label lbhscore;
         private System.Windows.Forms.Label lbHighscore;
         public System.Windows.Forms.PictureBox character;

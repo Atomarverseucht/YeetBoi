@@ -43,5 +43,25 @@ namespace endlesrunner
                 btMenu.BackColor = Color.White;
             }
         }
+
+        private void pbBlue_Click(object sender, EventArgs e)
+        {
+            if (Memory.ownedItems[0, 1] == false && Memory.coinvalue>=100)
+            {
+                Memory.coinvalue -= 100;
+                Memory.ownedItems[0, 1] = true;
+                lbBlueDude.Text = "$$$";
+                lbBlueDude.ForeColor = Color.Red;
+            }
+            else
+            {
+                lbBlueDude.Text = "Error";
+            }
+        }
+
+        private void lbBlueDude_Click(object sender, EventArgs e)
+        {
+            lbBlueDude.Text = "Please click on the picture";
+        }
     }
 }

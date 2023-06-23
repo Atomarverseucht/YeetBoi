@@ -46,8 +46,6 @@ namespace endlesrunner
             {
                 changeToGerman();
             }
-            tbVolume.Hide();
-            lbVolume.Hide();
         }
 
         private void tmUpdate_Tick(object sender, EventArgs e)
@@ -94,7 +92,6 @@ namespace endlesrunner
             btSkins.ForeColor = Color.White;
             btWhitemode.BackColor = Color.FromArgb(20, 20, 20);
             btWhitemode.ForeColor = Color.White;
-            lbVolume.ForeColor = Color.White;
         }
 
         private void btWhitemode_Click(object sender, EventArgs e)
@@ -123,7 +120,6 @@ namespace endlesrunner
             btSkins.ForeColor = Color.Black;
             btWhitemode.BackColor = Color.Transparent;
             btWhitemode.ForeColor = Color.Black;
-            lbVolume.ForeColor = Color.Black;
         }
 
         private void BtSkins_Click(object sender, EventArgs e)
@@ -157,7 +153,6 @@ namespace endlesrunner
                 btShop.Text = "Marktplatz";
                 btSkins.Text = "Kostüme";
                 btWhitemode.Text = "Hell";
-                lbVolume.Text = "Lautstärke";
                 lbCoins.Text = "Münzen: " + Memory.coinvalue;
         }
         private void changeToEnglish()
@@ -170,7 +165,6 @@ namespace endlesrunner
                 btShop.Text = "Shop";
                 btSkins.Text = "Skins";
                 btWhitemode.Text = "LightMode";
-                lbVolume.Text = "Volume";
                 lbCoins.Text = "Coins: " + Memory.coinvalue;
         }
 
@@ -211,6 +205,7 @@ namespace endlesrunner
         private void lbCode_Click(object sender, EventArgs e)
         {
             Clipboard.SetText(lbCode.Text);
+            lbCode.Text = "Copy to clipboard!";
         }
     }
 }

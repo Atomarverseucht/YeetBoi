@@ -36,17 +36,14 @@
             this.lbDate = new System.Windows.Forms.Label();
             this.tmUpdate = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
-            this.lbVolume = new System.Windows.Forms.Label();
             this.btShop = new System.Windows.Forms.Button();
             this.btSkins = new System.Windows.Forms.Button();
-            this.tbVolume = new System.Windows.Forms.TrackBar();
             this.btWhitemode = new System.Windows.Forms.Button();
             this.btLanguage = new System.Windows.Forms.Button();
             this.lbCoins = new System.Windows.Forms.Label();
             this.tbCodeInput = new System.Windows.Forms.TextBox();
             this.btSubmitCode = new System.Windows.Forms.Button();
             this.lbCode = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.tbVolume)).BeginInit();
             this.SuspendLayout();
             // 
             // btDarkmode
@@ -120,16 +117,6 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "YeetBoi";
             // 
-            // lbVolume
-            // 
-            this.lbVolume.AutoSize = true;
-            this.lbVolume.Location = new System.Drawing.Point(590, 610);
-            this.lbVolume.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.lbVolume.Name = "lbVolume";
-            this.lbVolume.Size = new System.Drawing.Size(84, 25);
-            this.lbVolume.TabIndex = 8;
-            this.lbVolume.Text = "Volume";
-            // 
             // btShop
             // 
             this.btShop.Location = new System.Drawing.Point(408, 394);
@@ -151,16 +138,6 @@
             this.btSkins.Text = "Skins";
             this.btSkins.UseVisualStyleBackColor = true;
             this.btSkins.Click += new System.EventHandler(this.BtSkins_Click);
-            // 
-            // tbVolume
-            // 
-            this.tbVolume.Location = new System.Drawing.Point(372, 640);
-            this.tbVolume.Margin = new System.Windows.Forms.Padding(6);
-            this.tbVolume.Maximum = 100;
-            this.tbVolume.Name = "tbVolume";
-            this.tbVolume.Size = new System.Drawing.Size(532, 90);
-            this.tbVolume.TabIndex = 11;
-            this.tbVolume.TickFrequency = 10;
             // 
             // btWhitemode
             // 
@@ -231,10 +208,8 @@
             this.Controls.Add(this.tbCodeInput);
             this.Controls.Add(this.lbCoins);
             this.Controls.Add(this.btWhitemode);
-            this.Controls.Add(this.tbVolume);
             this.Controls.Add(this.btSkins);
             this.Controls.Add(this.btShop);
-            this.Controls.Add(this.lbVolume);
             this.Controls.Add(this.btLanguage);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbDate);
@@ -248,7 +223,6 @@
             this.Name = "mainMenu";
             this.Text = "YeetBoi";
             this.Load += new System.EventHandler(this.mainMenu_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.tbVolume)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -263,11 +237,9 @@
         private System.Windows.Forms.Label lbDate;
         private System.Windows.Forms.Timer tmUpdate;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lbVolume;
         private System.Windows.Forms.Button btShop;
         private System.Windows.Forms.Button btSkins;
         private System.Windows.Forms.Button btWhitemode;
-        public System.Windows.Forms.TrackBar tbVolume;
         private System.Windows.Forms.Button btLanguage;
         private System.Windows.Forms.Label lbCoins;
         private System.Windows.Forms.TextBox tbCodeInput;

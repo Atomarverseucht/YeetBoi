@@ -218,6 +218,7 @@
             this.lbCode.Size = new System.Drawing.Size(63, 25);
             this.lbCode.TabIndex = 16;
             this.lbCode.Text = "Code";
+            this.lbCode.Click += new System.EventHandler(this.lbCode_Click);
             // 
             // mainMenu
             // 

@@ -195,6 +195,22 @@ namespace endlesrunner
         private void btSubmitCode_Click(object sender, EventArgs e)
         {
             Memory.decodeVariables(tbCodeInput.Text.Split('.'));
+            lbCoins.Text = "Coins: " + Memory.coinvalue.ToString();              // Geldanzeige
+
+            if (Memory.mode == true)                                              // Dark-/Lightmode
+            {
+                Darkmode();
+            }
+
+            if (Memory.language == true)                                          // German-English
+            {
+                changeToGerman();
+            }
+        }
+
+        private void lbCode_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(lbCode.Text);
         }
     }
 }

@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Media;
+using System.Net.Mail;
+using System.Net;
 
 namespace endlesrunner
 {
@@ -37,12 +39,12 @@ namespace endlesrunner
             lbDate.Text = DateTime.Now.ToLongDateString();
             lbCoins.Text = "Coins: " + Memory.coinvalue.ToString();              // Geldanzeige
 
-            if(Memory.mode == true)                                              // Dark-/Lightmode
-            { 
-                Darkmode(); 
-            }                           
+            if (Memory.mode == true)                                              // Dark-/Lightmode
+            {
+                Darkmode();
+            }
 
-            if(Memory.language == true)                                          // German-English
+            if (Memory.language == true)                                          // German-English
             {
                 changeToGerman();
             }
@@ -145,27 +147,27 @@ namespace endlesrunner
         }
         private void changeToGerman()
         {
-                lbTime.Text = "Uhrzeit: ";
-                btStart.Text = "Spielen";
-                btDarkmode.Text = "Dunkel";
-                btLanguage.Text = "Ändern auf Englisch";
-                btExit.Text = "Beenden";
-                btShop.Text = "Marktplatz";
-                btSkins.Text = "Kostüme";
-                btWhitemode.Text = "Hell";
-                lbCoins.Text = "Münzen: " + Memory.coinvalue;
+            lbTime.Text = "Uhrzeit: ";
+            btStart.Text = "Spielen";
+            btDarkmode.Text = "Dunkel";
+            btLanguage.Text = "Ändern auf Englisch";
+            btExit.Text = "Beenden";
+            btShop.Text = "Marktplatz";
+            btSkins.Text = "Kostüme";
+            btWhitemode.Text = "Hell";
+            lbCoins.Text = "Münzen: " + Memory.coinvalue;
         }
         private void changeToEnglish()
         {
-                lbTime.Text = "Time: ";
-                btStart.Text = "Play";
-                btDarkmode.Text = "Darkmode";
-                btLanguage.Text = "Change to German";
-                btExit.Text = "Exit";
-                btShop.Text = "Shop";
-                btSkins.Text = "Skins";
-                btWhitemode.Text = "LightMode";
-                lbCoins.Text = "Coins: " + Memory.coinvalue;
+            lbTime.Text = "Time: ";
+            btStart.Text = "Play";
+            btDarkmode.Text = "Darkmode";
+            btLanguage.Text = "Change to German";
+            btExit.Text = "Exit";
+            btShop.Text = "Shop";
+            btSkins.Text = "Skins";
+            btWhitemode.Text = "LightMode";
+            lbCoins.Text = "Coins: " + Memory.coinvalue;
         }
 
         private void btShop_Click(object sender, EventArgs e)
@@ -173,8 +175,8 @@ namespace endlesrunner
             shop shop = new shop();
             shop.Show();
             this.Hide();
-        }        
-        
+        }
+
         public string getCode()
         {
             string variables = "";
@@ -204,7 +206,7 @@ namespace endlesrunner
 
         private void lbCode_Click(object sender, EventArgs e)
         {
-            Clipboard.SetText(lbCode.Text);
+            Clipboard.SetText(getCode());
             lbCode.Text = "Copy to clipboard!";
         }
     }

@@ -42,6 +42,14 @@ namespace endlesrunner
                 ForeColor = Color.Black;
                 btMenu.BackColor = Color.White;
             }
+
+            if (Memory.language)
+            {
+                lbBack1.Text = "Baum / Hintergrund \n (150 Münzen)";
+                lbBlueDude.Text = "Blauer Kerl \n (100 Münzen)";
+            }
+            if (Memory.ownedItems[0, 1]) { lbBlueDude.Text = "$$$"; }       // Anzeige, was bereits gekauft wurde
+            if (Memory.ownedItems[1, 1]) { lbBack1.Text = "$$$"; }
         }
 
         private void pbBlue_Click(object sender, EventArgs e)

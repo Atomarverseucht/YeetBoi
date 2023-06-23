@@ -140,7 +140,7 @@
             // 
             this.lbBasicBack.AutoSize = true;
             this.lbBasicBack.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbBasicBack.Location = new System.Drawing.Point(69, 763);
+            this.lbBasicBack.Location = new System.Drawing.Point(47, 763);
             this.lbBasicBack.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lbBasicBack.Name = "lbBasicBack";
             this.lbBasicBack.Size = new System.Drawing.Size(356, 45);

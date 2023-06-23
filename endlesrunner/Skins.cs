@@ -59,6 +59,8 @@ private void Skins_Load(object sender, EventArgs e)
             {
                 lbRedDude.Text = "Roter Kerl";
                 lbBlueDude.Text = "Blauer Kerl";
+                lbBack1.Text = "Baum / Hintergrund";
+                lbBasicBack.Text = "klassischer Hintergrund";
             }
 
             if (Memory.ownedItems[0, 1] == false)

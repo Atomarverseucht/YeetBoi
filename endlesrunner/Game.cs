@@ -112,8 +112,8 @@ namespace endlesrunner
                             Properties.Settings.Default.Save();
                         }
 
-                       
                         Memory.coinvalue = Memory.coinvalue + coin;                   // Kontostand aktualisieren
+                        lbMenu.Show();                                                // Zeige, dass man mit "M" ins Menü kommt
                     }
                 }
             }
@@ -179,7 +179,7 @@ namespace endlesrunner
                 jumping = true;
             }
 
-            if(e.KeyCode == Keys.M == true)                                  // der Key M wird so ausgerichtet das er beim drücken zu Form2 leitet
+            if(e.KeyCode == Keys.M == true && isGameover == true)                                  // der Key M wird so ausgerichtet das er beim drücken zu Form2 leitet
             {
                 M.Show();
                 this.Hide();
@@ -218,8 +218,18 @@ namespace endlesrunner
             obstaclespeed = 10;
             coinspeed = 10;
             coin = 0;
-            lbScore.Text = "Score:  " + score;
-            lbcoins.Text = "Coins:  " + coin;
+
+            if(Memory.language == false)                        // Anzeige in Englisch/Deutsch
+            {
+                lbScore.Text = "Score:  " + score;
+                lbcoins.Text = "Coins:  " + coin;
+            }
+            else 
+            {
+                lbScore.Text = "Punkte:  " + score;
+                lbcoins.Text = "Münzen:  " + coin;
+            }
+
             character.Image = Properties.Resources.chrakter_neu_2;         
             isGameover = false;
             character.Top = 363;
@@ -247,7 +257,12 @@ namespace endlesrunner
 
         private void game_Load(object sender, EventArgs e)
         {
-
+            lbMenu.Hide();
+            if (Memory.language == true)
+            {
+                lbHighscore.Text = "Rekord: ";
+                lbMenu.Text = "Drücke M um zum Menü zurückzukehren";
+            }
         }
     }
 }

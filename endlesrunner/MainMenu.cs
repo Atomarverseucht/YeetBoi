@@ -134,15 +134,15 @@ namespace endlesrunner
         // Language-Switch English/German
         private void BtLanguage_Click(object sender, EventArgs e)
         {
-            if (Memory.language == true)
+            if (Memory.language == false)
             {
                 changeToGerman();
-                Memory.language = false;
+                Memory.language = true;
             }
             else
             {
                 changeToEnglish();
-                Memory.language = true;
+                Memory.language = false;
             }
         }
         private void changeToGerman()

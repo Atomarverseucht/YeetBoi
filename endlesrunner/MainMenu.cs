@@ -34,8 +34,6 @@ namespace endlesrunner
             tmUpdate.Start();
             lbTime.Text = DateTime.Now.ToLongTimeString();
             lbDate.Text = DateTime.Now.ToLongDateString();
-            Memory.language = false;
-
             lbCoins.Text = "Coins: " + Memory.coinvalue.ToString();              // Geldanzeige
 
             if(Memory.mode == true)                                              // Dark-/Lightmode

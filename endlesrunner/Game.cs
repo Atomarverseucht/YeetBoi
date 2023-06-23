@@ -54,9 +54,17 @@ namespace endlesrunner
         private void MainGameTimerEvent(object sender, EventArgs e)
         {
             character.Top += jumpSpeed;
-            lbScore.Text = "Score: " + score;
-            lbcoins.Text = "Coins: " + coin;
-
+            if (!Memory.language)
+            {
+                lbScore.Text = "Score: " + score;
+                lbcoins.Text = "Coins: " + coin;
+            }
+            else
+            {
+                lbScore.Text = "Punkte: " + score;
+                lbcoins.Text = "Münzen: " + coin;
+            }
+            
             if(jumping == true && force <= 0)
             {
                 jumping = false;        // Blockiert Springen in der Luft
@@ -97,23 +105,36 @@ namespace endlesrunner
                         score++;
                     }
 
-                    if (character.Bounds.IntersectsWith(x.Bounds))          // Gameover Sequence
+                    if (score > Memory.hs_score)                                      // Highscore wird erfasst und gespeichert
+                    {
+                        lbhscore.Text = score.ToString();
+                        Memory.hs_score = score;
+                    }
+
+                    if (character.Bounds.IntersectsWith(x.Bounds))          // Gameover Sequenz
                     {
                         gametimer.Stop();
                         Dead.Play();
                         character.Image = Properties.Resources.Player_dead;
-                        lbScore.Text += "  Press R to restart the game!";
-                        isGameover = true;
 
-                        if (score > s)                                      // Highscore wird erfasst und gespeichert
+                        if(Memory.language == false)                            //Gameover Text Englisch/Deutsch
+                        {
+                            lbScore.Text += "  Press R to restart the game!";
+                        }
+                        else
+                        {
+                            lbScore.Text += "  Drücke R um das Spiel neuzustarten!";
+                        }
+
+                        if (score > Memory.hs_score)                                      // Highscore wird erfasst und gespeichert
                         {
                             lbhscore.Text = score.ToString();
-                            Properties.Settings.Default.h_score = lbhscore.Text;
-                            Properties.Settings.Default.Save();
+                            Memory.hs_score = score;
                         }
 
                         Memory.coinvalue = Memory.coinvalue + coin;                   // Kontostand aktualisieren
                         lbMenu.Show();                                                // Zeige, dass man mit "M" ins Menü kommt
+                        isGameover = true;
                     }
                 }
             }
@@ -229,7 +250,7 @@ namespace endlesrunner
                 lbScore.Text = "Punkte:  " + score;
                 lbcoins.Text = "Münzen:  " + coin;
             }
-
+            lbhscore.Text = Memory.hs_score.ToString();
             character.Image = Properties.Resources.chrakter_neu_2;         
             isGameover = false;
             character.Top = 363;
@@ -258,10 +279,13 @@ namespace endlesrunner
         private void game_Load(object sender, EventArgs e)
         {
             lbMenu.Hide();
+            lbhscore.Text = Memory.hs_score.ToString();
+
             if (Memory.language == true)
             {
-                lbHighscore.Text = "Rekord: ";
+                lbHighscore.Text = "Rekord:";
                 lbMenu.Text = "Drücke M um zum Menü zurückzukehren";
+                lbhscore.Location = new Point(110, 60);
             }
         }
     }

@@ -63,5 +63,25 @@ namespace endlesrunner
         {
             lbBlueDude.Text = "Please click on the picture";
         }
+
+        private void pbBack1_Click(object sender, EventArgs e)
+        {
+            if (Memory.ownedItems[1, 1] == false && Memory.coinvalue >= 150)
+            {
+                Memory.coinvalue -= 150;
+                Memory.ownedItems[1, 1] = true;
+                lbBlueDude.Text = "$$$";
+                lbBlueDude.ForeColor = Color.Red;
+            }
+            else
+            {
+                lbBlueDude.Text = "Error";
+            }
+        }
+
+        private void lbBack1_Click(object sender, EventArgs e)
+        {
+            lbBlueDude.Text = "Please click on the picture";
+        }
     }
 }

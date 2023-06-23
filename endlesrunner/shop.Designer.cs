@@ -82,6 +82,7 @@
             this.pbBack1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbBack1.TabIndex = 8;
             this.pbBack1.TabStop = false;
+            this.pbBack1.Click += new System.EventHandler(this.pbBack1_Click);
             // 
             // lbBack1
             // 
@@ -93,6 +94,7 @@
             this.lbBack1.Size = new System.Drawing.Size(377, 90);
             this.lbBack1.TabIndex = 9;
             this.lbBack1.Text = "Tree / Background\r\n(150 Coins)\r\n";
+            this.lbBack1.Click += new System.EventHandler(this.lbBack1_Click);
             // 
             // shop
             // 

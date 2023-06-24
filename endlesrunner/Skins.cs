@@ -74,6 +74,19 @@ private void Skins_Load(object sender, EventArgs e)
                 pbBack1.Hide();
                 lbBack1.ForeColor = Color.DarkRed;
             }
+
+            switch (Memory.selectedSkin)                                //Anzeige des bereits ausgewählten Skins / Backgrounds
+            {
+                case 0: lbRedDude.ForeColor = Color.Gold; break;
+                case 1: lbBlueDude.ForeColor = Color.Gold; break;
+                default: lbRedDude.ForeColor = Color.Gold; break;
+            }
+            switch (Memory.selectedBackground)
+            {
+                case 0: lbBasicBack.ForeColor = Color.Gold; break;
+                case 1: lbBack1.ForeColor = Color.Gold; break;
+                default: lbBasicBack.ForeColor = Color.Gold; break;
+            }
         }
 
         private void pbRed_Click(object sender, EventArgs e)

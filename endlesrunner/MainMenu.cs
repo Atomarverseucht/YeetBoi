@@ -206,8 +206,16 @@ namespace endlesrunner
 
         private void lbCode_Click(object sender, EventArgs e)
         {
-            Clipboard.SetText(getCode());
-            lbCode.Text = "Copy to clipboard!";
+            if(tbCodeInput.Text.Contains("Copy to clipboard!"))
+            {
+                tbCodeInput.Text = "";
+            }
+            else
+            {
+                Clipboard.SetText(getCode());
+                tbCodeInput.Text = "Copy to clipboard!";                
+            }
+
         }
     }
 }

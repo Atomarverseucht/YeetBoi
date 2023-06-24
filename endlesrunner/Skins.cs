@@ -16,7 +16,7 @@ namespace endlesrunner
     {
         public SoundPlayer ShopPlayer;
         public Skins()
-        {   
+        {
             InitializeComponent();
             ShopPlayer = new SoundPlayer("Main Menu.wav");
             ShopPlayer.PlayLooping();
@@ -29,33 +29,10 @@ namespace endlesrunner
             this.Hide();
         }
 
-public void showMode()
+        private void Skins_Load(object sender, EventArgs e)
         {
-        if (Memory.mode)                                            // Darkmode
-            {
-                BackColor = Color.Black;
-                ForeColor = Color.White;
-                lbBlueDude.ForeColor = Color.White;
-                lbRedDude.ForeColor = Color.White;
-                lbBack1.ForeColor = Color.White;
-                lbBasicBack.ForeColor = Color.White;
-                btMenu.BackColor = Color.Black;
-            }
-            else                                                        // Lightmode
-            {
-                BackColor= Color.White;
-                ForeColor= Color.Black;
-                lbRedDude.ForeColor = Color.Black;
-                lbBlueDude.ForeColor = Color.Black;
-                lbBasicBack.ForeColor= Color.Black;
-                lbBack1.ForeColor= Color.Black;
-                btMenu.BackColor = Color.White;
-            }
-        }
-
-private void Skins_Load(object sender, EventArgs e)
-        {
-            showMode();
+            resetSkinForeColor();
+            resetBackgroundForeColor();
             if (Memory.language)
             {
                 lbRedDude.Text = "Roter Kerl";
@@ -67,7 +44,7 @@ private void Skins_Load(object sender, EventArgs e)
             if (Memory.ownedItems[0, 1] == false)
             {
                 pbBlue.Hide();
-                lbBlueDude.ForeColor= Color.DarkRed;
+                lbBlueDude.ForeColor = Color.DarkRed;
             }
             if (Memory.ownedItems[1, 1] == false)
             {
@@ -91,7 +68,7 @@ private void Skins_Load(object sender, EventArgs e)
 
         private void pbRed_Click(object sender, EventArgs e)
         {
-            showMode();
+            resetSkinForeColor();
             lbRedDude.ForeColor = Color.Gold;
             Memory.selectedSkin = 0;
         }
@@ -100,28 +77,58 @@ private void Skins_Load(object sender, EventArgs e)
         {
             if (Memory.ownedItems[0, 1] == true)
             {
-            showMode();
-            lbBlueDude.ForeColor= Color.Gold;
-            Memory.selectedSkin = 1;
+                resetSkinForeColor();
+                lbBlueDude.ForeColor = Color.Gold;
+                Memory.selectedSkin = 1;
             }
-
         }
         private void pbBasicBack_Click(object sender, EventArgs e)
         {
-            showMode();
+            resetBackgroundForeColor();
             lbBasicBack.ForeColor = Color.Gold;
             Memory.selectedBackground = 0;
         }
         private void pbBack1_Click(object sender, EventArgs e)
         {
-            if (Memory.ownedItems[1,1] == true)
+            if (Memory.ownedItems[1, 1] == true)
             {
-                showMode();
+                resetBackgroundForeColor();
                 lbBack1.ForeColor = Color.Gold;
                 Memory.selectedBackground = 1;
             }
         }
 
-
+        public void resetSkinForeColor()
+        {
+            if (Memory.mode)                                            // Darkmode
+            {
+                BackColor = Color.Black;
+                ForeColor = Color.White;
+                lbBlueDude.ForeColor = Color.White;
+                lbRedDude.ForeColor = Color.White;
+            }
+            else
+            {
+                BackColor = Color.White;
+                ForeColor = Color.Black;
+                lbRedDude.ForeColor = Color.Black;
+                lbBlueDude.ForeColor = Color.Black;
+            }
+        }
+        public void resetBackgroundForeColor()
+        {
+            if (Memory.mode)
+            {
+                lbBack1.ForeColor = Color.White;
+                lbBasicBack.ForeColor = Color.White;
+                btMenu.BackColor = Color.Black;
+            }
+            else 
+            {
+                lbBasicBack.ForeColor = Color.Black;
+                lbBack1.ForeColor = Color.Black;
+                btMenu.BackColor = Color.White;
+            }
+        }
     }
 }

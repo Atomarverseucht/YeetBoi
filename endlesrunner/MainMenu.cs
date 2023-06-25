@@ -85,7 +85,6 @@ namespace endlesrunner
         {
             Darkmode();
             Memory.mode = true;
-
         }
         private void Darkmode()
         {

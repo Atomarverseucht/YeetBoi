@@ -48,8 +48,14 @@ namespace endlesrunner
                 lbBack1.Text = "Baum / Hintergrund \n (150 Münzen)";
                 lbBlueDude.Text = "Blauer Kerl \n (100 Münzen)";
             }
-            if (Memory.ownedItems[0, 1]) { lbBlueDude.Text = "$$$"; }       // Anzeige, was bereits gekauft wurde
-            if (Memory.ownedItems[1, 1]) { lbBack1.Text = "$$$"; }
+            if (Memory.ownedItems[0, 1])                                    // Anzeige, was bereits gekauft wurde
+            { 
+                lbBlueDude.Text = "$$$"; 
+            }       
+            if (Memory.ownedItems[1, 1]) 
+            { 
+                lbBack1.Text = "$$$"; 
+            }
         }
 
         private void pbBlue_Click(object sender, EventArgs e)

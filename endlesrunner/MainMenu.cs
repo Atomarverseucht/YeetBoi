@@ -34,7 +34,6 @@ namespace endlesrunner
 
         private void mainMenu_Load(object sender, EventArgs e)
         {
-
             tmUpdate.Start();
             lbCoins.Text = "Coins: " + Memory.coinvalue.ToString();              // Geldanzeige
 
@@ -55,7 +54,7 @@ namespace endlesrunner
             CultureInfo de = new CultureInfo("de");
             if (Memory.language)
             {
-                lbDate.Text = DateTime.Now.ToLongDateString().ToString(de);
+                lbDate.Text = DateTime.Now.ToString(de.DateTimeFormat.LongDatePattern, de);
                 lbTime.Text = DateTime.Now.ToString(de.DateTimeFormat.LongTimePattern, de);
             }
             else

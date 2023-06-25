@@ -41,7 +41,10 @@ namespace endlesrunner
             {
                 Darkmode();
             }
-
+            else
+            {
+                Whitemode();
+            }
             if (Memory.language == true)                                          // German-English
             {
                 changeToGerman();
@@ -82,6 +85,7 @@ namespace endlesrunner
         {
             Darkmode();
             Memory.mode = true;
+
         }
         private void Darkmode()
         {
@@ -103,7 +107,9 @@ namespace endlesrunner
             btSkins.BackColor = Color.FromArgb(20, 20, 20);
             btSkins.ForeColor = Color.White;
             btWhitemode.BackColor = Color.FromArgb(20, 20, 20);
-            btWhitemode.ForeColor = Color.White;
+            btWhitemode.ForeColor = Color.White;            
+            btDarkmode.Hide();
+            btWhitemode.Show();
         }
 
         private void btWhitemode_Click(object sender, EventArgs e)
@@ -132,6 +138,8 @@ namespace endlesrunner
             btSkins.ForeColor = Color.Black;
             btWhitemode.BackColor = Color.Transparent;
             btWhitemode.ForeColor = Color.Black;
+            btWhitemode.Hide();
+            btDarkmode.Show();
         }
 
         private void BtSkins_Click(object sender, EventArgs e)

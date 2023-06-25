@@ -78,18 +78,18 @@ namespace endlesrunner
             {
                 Memory.coinvalue -= 150;
                 Memory.ownedItems[1, 1] = true;
-                lbBlueDude.Text = "$$$";
-                lbBlueDude.ForeColor = Color.Red;
+                lbBack1.Text = "$$$";
+                lbBack1.ForeColor = Color.Red;
             }
             else
             {
-                lbBlueDude.Text = "Error";
+                lbBack1.Text = "Error";
             }
         }
 
         private void lbBack1_Click(object sender, EventArgs e)
         {
-            lbBlueDude.Text = "Please click on the picture";
+            lbBack1.Text = "Please click on the picture";
         }
     }
 }

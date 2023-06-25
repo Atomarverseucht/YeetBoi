@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Media;
 using System.Net.Mail;
 using System.Net;
+using System.Globalization;
 
 namespace endlesrunner
 {
@@ -35,8 +36,6 @@ namespace endlesrunner
         {
 
             tmUpdate.Start();
-            lbTime.Text = DateTime.Now.ToLongTimeString();
-            lbDate.Text = DateTime.Now.ToLongDateString();
             lbCoins.Text = "Coins: " + Memory.coinvalue.ToString();              // Geldanzeige
 
             if (Memory.mode == true)                                              // Dark-/Lightmode
@@ -52,7 +51,19 @@ namespace endlesrunner
 
         private void tmUpdate_Tick(object sender, EventArgs e)
         {
-            lbTime.Text = DateTime.Now.ToLongTimeString();
+            CultureInfo usa = new CultureInfo("en-US");
+            CultureInfo de = new CultureInfo("de");
+            if (Memory.language)
+            {
+                lbDate.Text = DateTime.Now.ToLongDateString().ToString(de);
+                lbTime.Text = DateTime.Now.ToString(de.DateTimeFormat.LongTimePattern, de);
+            }
+            else
+            {
+                lbDate.Text = DateTime.Now.ToString(usa.DateTimeFormat.LongDatePattern, usa);
+                lbTime.Text = DateTime.Now.ToString(usa.DateTimeFormat.LongTimePattern, usa);
+            }
+
             tmUpdate.Start();
             if (Memory.mode == false) { Whitemode(); }
             else { Darkmode(); }
@@ -156,6 +167,7 @@ namespace endlesrunner
             btSkins.Text = "Kostüme";
             btWhitemode.Text = "Hell";
             lbCoins.Text = "Münzen: " + Memory.coinvalue;
+            btSubmitCode.Text = "Bestätigen";
         }
         private void changeToEnglish()
         {
@@ -168,6 +180,7 @@ namespace endlesrunner
             btSkins.Text = "Skins";
             btWhitemode.Text = "LightMode";
             lbCoins.Text = "Coins: " + Memory.coinvalue;
+            btSubmitCode.Text = "Submit";
         }
 
         private void btShop_Click(object sender, EventArgs e)
@@ -215,7 +228,6 @@ namespace endlesrunner
                 Clipboard.SetText(getCode());
                 tbCodeInput.Text = "Copy to clipboard!";                
             }
-
         }
     }
 }

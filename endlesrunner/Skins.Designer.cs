@@ -31,16 +31,19 @@
             this.btMenu = new System.Windows.Forms.Button();
             this.lbRedDude = new System.Windows.Forms.Label();
             this.lbBlueDude = new System.Windows.Forms.Label();
+            this.lbBack1 = new System.Windows.Forms.Label();
+            this.lbBasicBack = new System.Windows.Forms.Label();
+            this.pbBasicBack = new System.Windows.Forms.PictureBox();
+            this.pbBack1 = new System.Windows.Forms.PictureBox();
             this.pbBlue = new System.Windows.Forms.PictureBox();
             this.pbRed = new System.Windows.Forms.PictureBox();
-            this.pbBack1 = new System.Windows.Forms.PictureBox();
-            this.lbBack1 = new System.Windows.Forms.Label();
-            this.pbBasicBack = new System.Windows.Forms.PictureBox();
-            this.lbBasicBack = new System.Windows.Forms.Label();
+            this.lbDino = new System.Windows.Forms.Label();
+            this.pbDino = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBasicBack)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBack1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBlue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRed)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbBack1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbBasicBack)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDino)).BeginInit();
             this.SuspendLayout();
             // 
             // btMenu
@@ -76,6 +79,52 @@
             this.lbBlueDude.TabIndex = 4;
             this.lbBlueDude.Text = "BlueDude";
             // 
+            // lbBack1
+            // 
+            this.lbBack1.AutoSize = true;
+            this.lbBack1.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBack1.Location = new System.Drawing.Point(547, 763);
+            this.lbBack1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lbBack1.Name = "lbBack1";
+            this.lbBack1.Size = new System.Drawing.Size(377, 45);
+            this.lbBack1.TabIndex = 10;
+            this.lbBack1.Text = "Tree / Background\r\n";
+            // 
+            // lbBasicBack
+            // 
+            this.lbBasicBack.AutoSize = true;
+            this.lbBasicBack.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBasicBack.Location = new System.Drawing.Point(47, 763);
+            this.lbBasicBack.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lbBasicBack.Name = "lbBasicBack";
+            this.lbBasicBack.Size = new System.Drawing.Size(356, 45);
+            this.lbBasicBack.TabIndex = 12;
+            this.lbBasicBack.Text = "Basic Background\r\n";
+            // 
+            // pbBasicBack
+            // 
+            this.pbBasicBack.Image = global::endlesrunner.Properties.Resources._1000_F_212319832_0b9hMnx0dX4GwpD3xBFLxX6GkclQsroj;
+            this.pbBasicBack.Location = new System.Drawing.Point(55, 469);
+            this.pbBasicBack.Margin = new System.Windows.Forms.Padding(6);
+            this.pbBasicBack.Name = "pbBasicBack";
+            this.pbBasicBack.Size = new System.Drawing.Size(423, 288);
+            this.pbBasicBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbBasicBack.TabIndex = 11;
+            this.pbBasicBack.TabStop = false;
+            this.pbBasicBack.Click += new System.EventHandler(this.pbBasicBack_Click);
+            // 
+            // pbBack1
+            // 
+            this.pbBack1.Image = global::endlesrunner.Properties.Resources.istockphoto_1324220664_170667a;
+            this.pbBack1.Location = new System.Drawing.Point(526, 469);
+            this.pbBack1.Margin = new System.Windows.Forms.Padding(6);
+            this.pbBack1.Name = "pbBack1";
+            this.pbBack1.Size = new System.Drawing.Size(423, 288);
+            this.pbBack1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbBack1.TabIndex = 9;
+            this.pbBack1.TabStop = false;
+            this.pbBack1.Click += new System.EventHandler(this.pbBack1_Click);
+            // 
             // pbBlue
             // 
             this.pbBlue.Image = global::endlesrunner.Properties.Resources.chasrkter_3;
@@ -101,57 +150,35 @@
             this.pbRed.Tag = "";
             this.pbRed.Click += new System.EventHandler(this.pbRed_Click);
             // 
-            // pbBack1
+            // lbDino
             // 
-            this.pbBack1.Image = global::endlesrunner.Properties.Resources.istockphoto_1324220664_170667a;
-            this.pbBack1.Location = new System.Drawing.Point(526, 469);
-            this.pbBack1.Margin = new System.Windows.Forms.Padding(6);
-            this.pbBack1.Name = "pbBack1";
-            this.pbBack1.Size = new System.Drawing.Size(423, 288);
-            this.pbBack1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbBack1.TabIndex = 9;
-            this.pbBack1.TabStop = false;
-            this.pbBack1.Click += new System.EventHandler(this.pbBack1_Click);
+            this.lbDino.AutoSize = true;
+            this.lbDino.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDino.Location = new System.Drawing.Point(937, 377);
+            this.lbDino.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lbDino.Name = "lbDino";
+            this.lbDino.Size = new System.Drawing.Size(188, 45);
+            this.lbDino.TabIndex = 14;
+            this.lbDino.Text = "   Dino ";
             // 
-            // lbBack1
+            // pbDino
             // 
-            this.lbBack1.AutoSize = true;
-            this.lbBack1.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbBack1.Location = new System.Drawing.Point(547, 763);
-            this.lbBack1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.lbBack1.Name = "lbBack1";
-            this.lbBack1.Size = new System.Drawing.Size(377, 45);
-            this.lbBack1.TabIndex = 10;
-            this.lbBack1.Text = "Tree / Background\r\n";
-            // 
-            // pbBasicBack
-            // 
-            this.pbBasicBack.Image = global::endlesrunner.Properties.Resources._1000_F_212319832_0b9hMnx0dX4GwpD3xBFLxX6GkclQsroj;
-            this.pbBasicBack.Location = new System.Drawing.Point(55, 469);
-            this.pbBasicBack.Margin = new System.Windows.Forms.Padding(6);
-            this.pbBasicBack.Name = "pbBasicBack";
-            this.pbBasicBack.Size = new System.Drawing.Size(423, 288);
-            this.pbBasicBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbBasicBack.TabIndex = 11;
-            this.pbBasicBack.TabStop = false;
-            this.pbBasicBack.Click += new System.EventHandler(this.pbBasicBack_Click);
-            // 
-            // lbBasicBack
-            // 
-            this.lbBasicBack.AutoSize = true;
-            this.lbBasicBack.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbBasicBack.Location = new System.Drawing.Point(47, 763);
-            this.lbBasicBack.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.lbBasicBack.Name = "lbBasicBack";
-            this.lbBasicBack.Size = new System.Drawing.Size(356, 45);
-            this.lbBasicBack.TabIndex = 12;
-            this.lbBasicBack.Text = "Basic Background\r\n";
+            this.pbDino.Image = global::endlesrunner.Properties.Resources.running;
+            this.pbDino.Location = new System.Drawing.Point(907, 74);
+            this.pbDino.Name = "pbDino";
+            this.pbDino.Size = new System.Drawing.Size(272, 288);
+            this.pbDino.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbDino.TabIndex = 13;
+            this.pbDino.TabStop = false;
+            this.pbDino.Click += new System.EventHandler(this.pbDino_Click);
             // 
             // Skins
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1698, 865);
+            this.Controls.Add(this.lbDino);
+            this.Controls.Add(this.pbDino);
             this.Controls.Add(this.lbBasicBack);
             this.Controls.Add(this.pbBasicBack);
             this.Controls.Add(this.lbBack1);
@@ -165,10 +192,11 @@
             this.Name = "Skins";
             this.Text = "Skins";
             this.Load += new System.EventHandler(this.Skins_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pbBasicBack)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBack1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBlue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRed)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbBack1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbBasicBack)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDino)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -185,5 +213,7 @@
         private System.Windows.Forms.Label lbBack1;
         private System.Windows.Forms.PictureBox pbBasicBack;
         private System.Windows.Forms.Label lbBasicBack;
+        private System.Windows.Forms.Label lbDino;
+        private System.Windows.Forms.PictureBox pbDino;
     }
 }

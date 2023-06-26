@@ -37,12 +37,12 @@
             this.lbHighscore = new System.Windows.Forms.Label();
             this.item = new System.Windows.Forms.PictureBox();
             this.ptcoin = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pbObstacle = new System.Windows.Forms.PictureBox();
             this.character = new System.Windows.Forms.PictureBox();
             this.pbBackground = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.item)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptcoin)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbObstacle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.character)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBackground)).BeginInit();
             this.SuspendLayout();
@@ -137,17 +137,17 @@
             this.ptcoin.TabStop = false;
             this.ptcoin.Tag = "coin";
             // 
-            // pictureBox2
+            // pbObstacle
             // 
-            this.pictureBox2.Image = global::endlesrunner.Properties.Resources.stein_2;
-            this.pictureBox2.Location = new System.Drawing.Point(816, 744);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(6);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(23, 46);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Tag = "obstacle";
+            this.pbObstacle.Image = global::endlesrunner.Properties.Resources.stein_2;
+            this.pbObstacle.Location = new System.Drawing.Point(816, 744);
+            this.pbObstacle.Margin = new System.Windows.Forms.Padding(6);
+            this.pbObstacle.Name = "pbObstacle";
+            this.pbObstacle.Size = new System.Drawing.Size(23, 46);
+            this.pbObstacle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbObstacle.TabIndex = 3;
+            this.pbObstacle.TabStop = false;
+            this.pbObstacle.Tag = "obstacle";
             // 
             // character
             // 
@@ -185,7 +185,7 @@
             this.Controls.Add(this.lbcoins);
             this.Controls.Add(this.ptcoin);
             this.Controls.Add(this.lbMenu);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pbObstacle);
             this.Controls.Add(this.character);
             this.Controls.Add(this.lbScore);
             this.Controls.Add(this.pbBackground);
@@ -197,7 +197,7 @@
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.keyisup);
             ((System.ComponentModel.ISupportInitialize)(this.item)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptcoin)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbObstacle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.character)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBackground)).EndInit();
             this.ResumeLayout(false);
@@ -208,7 +208,7 @@
         #endregion
         private System.Windows.Forms.Label lbScore;
         private System.Windows.Forms.Timer gametimer;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pbObstacle;
         private System.Windows.Forms.Label lbMenu;
         private System.Windows.Forms.PictureBox ptcoin;
         private System.Windows.Forms.Label lbcoins;

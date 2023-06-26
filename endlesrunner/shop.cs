@@ -17,7 +17,7 @@ namespace endlesrunner
         public shop()
         {
             InitializeComponent();
-            ShopPlayer = new SoundPlayer("GameMainMenu.wav");
+            ShopPlayer = new SoundPlayer("Main Menu.wav");
             ShopPlayer.PlayLooping();
         }
 
@@ -94,6 +94,27 @@ namespace endlesrunner
         }
 
         private void lbBack1_Click(object sender, EventArgs e)
+        {
+            lbBack1.Text = "Please click on the picture";
+        }
+
+        private void pbDino_Click(object sender, EventArgs e)
+        {
+            if (Memory.ownedItems[0, 2] == false && Memory.coinvalue >= 250
+                )
+            {
+                Memory.coinvalue -= 150;
+                Memory.ownedItems[0, 2] = true;
+                lbDino.Text = "$$$";
+                lbDino.ForeColor = Color.Red;
+            }
+            else
+            {
+                lbDino.Text = "Error";
+            }
+        }
+
+        private void lbDino_Click(object sender, EventArgs e)
         {
             lbBack1.Text = "Please click on the picture";
         }

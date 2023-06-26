@@ -14,7 +14,7 @@ namespace endlesrunner
         public static bool mode = false;
         public static bool language = false;
         public static int hs_score = 0;
-        public static bool[,] ownedItems = { { true, false }, { true, false } };
+        public static bool[,] ownedItems = { { true, false, false }, { true, false, false } };
         public static string name = "YeetBoi"; 
 
         public static string[] encodeVariables()

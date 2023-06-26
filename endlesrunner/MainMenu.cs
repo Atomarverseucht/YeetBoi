@@ -22,7 +22,7 @@ namespace endlesrunner
         public mainMenu()
         {
             InitializeComponent();
-            MenuPlayer = new SoundPlayer("Main Menu.wav");
+            MenuPlayer = new SoundPlayer("GameMainMenu.wav");
             MenuPlayer.PlayLooping();                                      // Startet Musik beim öffnen des Menüs
             Ingame = new SoundPlayer("Ingame Music.wav");
         }

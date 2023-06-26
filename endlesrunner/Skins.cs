@@ -46,6 +46,11 @@ namespace endlesrunner
                 pbBlue.Hide();
                 lbBlueDude.ForeColor = Color.DarkRed;
             }
+            if (Memory.ownedItems[0, 2] == false)
+            {
+                pbDino.Hide();
+                lbDino.ForeColor = Color.DarkRed;
+            }
             if (Memory.ownedItems[1, 1] == false)
             {
                 pbBack1.Hide();
@@ -128,6 +133,16 @@ namespace endlesrunner
                 lbBasicBack.ForeColor = Color.Black;
                 lbBack1.ForeColor = Color.Black;
                 btMenu.BackColor = Color.White;
+            }
+        }
+
+        private void pbDino_Click(object sender, EventArgs e)
+        {
+            if (Memory.ownedItems[0, 2] == true)
+            {
+                resetSkinForeColor();
+                lbDino.ForeColor = Color.Gold;
+                Memory.selectedSkin = 2;
             }
         }
     }

@@ -276,6 +276,7 @@ namespace endlesrunner
             {
                 case 0: character.Image = Properties.Resources.chrakter_neu_2; break;
                 case 1: character.Image = Properties.Resources.chasrkter_3; break;
+                case 2: character.Image = Properties.Resources.running; break;
                 default: character.Image = Properties.Resources.chrakter_neu_2; break;
             }
         

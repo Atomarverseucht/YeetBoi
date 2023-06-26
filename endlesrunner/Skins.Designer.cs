@@ -103,7 +103,7 @@
             // 
             // pbBack1
             // 
-            this.pbBack1.Image = global::endlesrunner.Properties.Resources.welt;
+            this.pbBack1.Image = global::endlesrunner.Properties.Resources.istockphoto_1324220664_170667a;
             this.pbBack1.Location = new System.Drawing.Point(526, 469);
             this.pbBack1.Margin = new System.Windows.Forms.Padding(6);
             this.pbBack1.Name = "pbBack1";
@@ -126,7 +126,7 @@
             // 
             // pbBasicBack
             // 
-            this.pbBasicBack.Image = global::endlesrunner.Properties.Resources.Game_Background;
+            this.pbBasicBack.Image = global::endlesrunner.Properties.Resources._1000_F_212319832_0b9hMnx0dX4GwpD3xBFLxX6GkclQsroj;
             this.pbBasicBack.Location = new System.Drawing.Point(55, 469);
             this.pbBasicBack.Margin = new System.Windows.Forms.Padding(6);
             this.pbBasicBack.Name = "pbBasicBack";

@@ -199,15 +199,6 @@ namespace endlesrunner
                 this.Hide();
                 MenuPlayer.PlayLooping();                                                   // startet Musik wenn man ins Menü zurückkommt
             }
-
-            if(e.KeyCode == Keys.S == true)
-            {
-                character.Image = Properties.Resources.chasrkter_3;
-            }
-            if(e.KeyCode == Keys.C == true)
-            {
-                character.Image = Properties.Resources.chrakter_neu_2;
-            }
         }
 
         private void keyisup(object sender, KeyEventArgs e)
@@ -290,8 +281,8 @@ namespace endlesrunner
         
             switch (Memory.selectedBackground)
             {
-                case 0: pbBackground.Image = Properties.Resources.Game_Background; break;
-                case 1: pbBackground.Image = Properties.Resources.welt; break;
+                case 0: pbBackground.Image = Properties.Resources._1000_F_212319832_0b9hMnx0dX4GwpD3xBFLxX6GkclQsroj; break;
+                case 1: pbBackground.Image = Properties.Resources.istockphoto_1324220664_170667a; break;
                 default: pbBackground.Image = Properties.Resources.Game_Background; break;
             }
         }

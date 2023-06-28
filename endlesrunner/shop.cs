@@ -43,10 +43,13 @@ namespace endlesrunner
                 btMenu.BackColor = Color.White;
             }
 
+            lbCoins.Text = "Coins: " + Memory.coinvalue;
             if (Memory.language)
             {
                 lbBack1.Text = "besseren Hintergrund \n (150 Münzen)";
                 lbBlueDude.Text = "Blauer Kerl \n (100 Münzen)";
+                lbDino.Text = "Dino \n (250 Münzen)";
+                lbCoins.Text = "Münzen: " + Memory.coinvalue;
             }
             if (Memory.ownedItems[0, 1])                                    // Anzeige, was bereits gekauft wurde
             { 

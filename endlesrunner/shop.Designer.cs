@@ -35,7 +35,7 @@
             this.pbBack1 = new System.Windows.Forms.PictureBox();
             this.pbBlue = new System.Windows.Forms.PictureBox();
             this.lbDino = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbCoins = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbDino)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBack1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBlue)).BeginInit();
@@ -123,21 +123,21 @@
             this.lbDino.Text = "   Dino \r\n(250 Coins)";
             this.lbDino.Click += new System.EventHandler(this.lbDino_Click);
             // 
-            // label2
+            // lbCoins
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(31, 13);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 25);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "lbCoins";
+            this.lbCoins.AutoSize = true;
+            this.lbCoins.Location = new System.Drawing.Point(31, 13);
+            this.lbCoins.Name = "lbCoins";
+            this.lbCoins.Size = new System.Drawing.Size(84, 25);
+            this.lbCoins.TabIndex = 12;
+            this.lbCoins.Text = "lbCoins";
             // 
             // shop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1440, 962);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbCoins);
             this.Controls.Add(this.lbDino);
             this.Controls.Add(this.pbDino);
             this.Controls.Add(this.lbBack1);
@@ -167,6 +167,6 @@
         private System.Windows.Forms.Label lbBack1;
         private System.Windows.Forms.PictureBox pbDino;
         private System.Windows.Forms.Label lbDino;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbCoins;
     }
 }

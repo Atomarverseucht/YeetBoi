@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace endlesrunner
 {
-    internal class Memory
+     class Memory
     {
         public static int coinvalue = 0;
         public static int selectedSkin = 0;

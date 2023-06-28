@@ -52,6 +52,7 @@ namespace endlesrunner
 
         private void MainGameTimerEvent(object sender, EventArgs e)
         {
+            resizeScreen();
             character.Top += jumpSpeed;
             if (!Memory.language)
             {
@@ -114,9 +115,16 @@ namespace endlesrunner
                     {
                         gametimer.Stop();
                         Dead.Play();
-                        character.Image = Properties.Resources.Player_dead;
 
-                        if(Memory.language == false)                            //Gameover Text Englisch/Deutsch
+                        switch (Memory.selectedSkin)
+                        {
+                            case 0: character.Image = Properties.Resources.Player_dead; break;
+                            case 1: character.Image = Properties.Resources.blue_dead; break;
+                            case 2: character.Image.RotateFlip(RotateFlipType.Rotate180FlipX); break;
+                            default: character.Image = Properties.Resources.Player_dead; break;
+                        }
+
+                        if(Memory.language == false)                            // Gameover Text Englisch/Deutsch
                         {
                             lbScore.Text += "  Press R to restart the game!";
                         }
@@ -286,6 +294,24 @@ namespace endlesrunner
                 case 1: pbBackground.Image = Properties.Resources.istockphoto_1324220664_170667a; break;
                 default: pbBackground.Image = Properties.Resources.Game_Background; break;
             }
+
+            if(Memory.selectedSkin == 2)
+            {
+                pbObstacle.Image = Properties.Resources.obstacle_1;
+            }
+        }
+
+        public void resizeScreen()
+        {
+            int x = Game.ActiveForm.Width;
+            int y = Game.ActiveForm.Height;
+            pbBackground.Size = new Size(x, y);
+            //character.Location = new Point(0, Convert.ToInt32(y*0.9));
+        }
+
+        private void tmSize_Tick(object sender, EventArgs e)
+        {
+            resizeScreen();
         }
     }
 }

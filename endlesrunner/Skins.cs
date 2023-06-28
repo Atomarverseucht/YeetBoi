@@ -61,6 +61,7 @@ namespace endlesrunner
             {
                 case 0: lbRedDude.ForeColor = Color.Gold; break;
                 case 1: lbBlueDude.ForeColor = Color.Gold; break;
+                case 2: lbDino.ForeColor = Color.Gold; break;
                 default: lbRedDude.ForeColor = Color.Gold; break;
             }
             switch (Memory.selectedBackground)

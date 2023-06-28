@@ -40,6 +40,7 @@
             this.pbObstacle = new System.Windows.Forms.PictureBox();
             this.character = new System.Windows.Forms.PictureBox();
             this.pbBackground = new System.Windows.Forms.PictureBox();
+            this.tmSize = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.item)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptcoin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbObstacle)).BeginInit();
@@ -168,10 +169,16 @@
             this.pbBackground.Location = new System.Drawing.Point(-6, -29);
             this.pbBackground.Margin = new System.Windows.Forms.Padding(6);
             this.pbBackground.Name = "pbBackground";
-            this.pbBackground.Size = new System.Drawing.Size(748, 493);
-            this.pbBackground.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbBackground.Size = new System.Drawing.Size(1006, 655);
+            this.pbBackground.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbBackground.TabIndex = 7;
             this.pbBackground.TabStop = false;
+            // 
+            // tmSize
+            // 
+            this.tmSize.Enabled = true;
+            this.tmSize.Interval = 1000;
+            this.tmSize.Tick += new System.EventHandler(this.tmSize_Tick);
             // 
             // Game
             // 
@@ -217,6 +224,7 @@
         private System.Windows.Forms.Label lbHighscore;
         public System.Windows.Forms.PictureBox character;
         private System.Windows.Forms.PictureBox item;
+        private System.Windows.Forms.Timer tmSize;
     }
 }
 

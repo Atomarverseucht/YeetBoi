@@ -68,12 +68,12 @@
             // 
             this.lbBack1.AutoSize = true;
             this.lbBack1.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbBack1.Location = new System.Drawing.Point(92, 822);
+            this.lbBack1.Location = new System.Drawing.Point(77, 822);
             this.lbBack1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lbBack1.Name = "lbBack1";
-            this.lbBack1.Size = new System.Drawing.Size(377, 90);
+            this.lbBack1.Size = new System.Drawing.Size(419, 90);
             this.lbBack1.TabIndex = 9;
-            this.lbBack1.Text = "Tree / Background\r\n(150 Coins)\r\n";
+            this.lbBack1.Text = "Advanced Background\r\n(150 Coins)\r\n";
             this.lbBack1.Click += new System.EventHandler(this.lbBack1_Click);
             // 
             // pbDino

@@ -45,7 +45,7 @@ namespace endlesrunner
 
             if (Memory.language)
             {
-                lbBack1.Text = "Baum / Hintergrund \n (150 Münzen)";
+                lbBack1.Text = "besseren Hintergrund \n (150 Münzen)";
                 lbBlueDude.Text = "Blauer Kerl \n (100 Münzen)";
             }
             if (Memory.ownedItems[0, 1])                                    // Anzeige, was bereits gekauft wurde
@@ -55,6 +55,10 @@ namespace endlesrunner
             if (Memory.ownedItems[1, 1]) 
             { 
                 lbBack1.Text = "$$$"; 
+            }
+            if (Memory.ownedItems[0, 2])
+            {
+                lbDino.Text = "$$$";
             }
         }
 
